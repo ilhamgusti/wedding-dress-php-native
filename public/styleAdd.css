@@ -1,0 +1,231 @@
+body{
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
+}
+
+#header{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #022335;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+  }
+  .span-header{
+      color: white;
+  }
+  .ButtonLogout{
+    justify-self: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 10px 17px 10px 17px;
+    /* height: 160%; */
+    color: rgb(255, 255, 255);
+    background: rgb(59, 107, 196);
+    border-radius: 5px;
+    border:none;
+  }
+  .form-input{
+    grid-template-columns: .6fr 0.04fr 1fr;
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+  }
+  .form-input-items{
+    font-size: 30px;
+    font-family: 'montserrat', sans-serif;
+  }
+  .input-field{
+    font-family: inherit;
+    font-weight: bolder;
+    color: black;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(191, 191, 191);
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .Button{
+    justify-self: center;
+    width: 34%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 10px 17px 10px 17px;
+    /* height: 160%; */
+    color: rgb(255, 255, 255);
+    background: rgb(59, 107, 196);
+    border-radius: 5px;
+    border:none;
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 1.5em;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: #fff;
+  background-image: linear-gradient(48deg, #fff 0%, #e5efe9 100%);
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: -20px 20px 35px 1px rgba(10, 49, 86, 0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  margin: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.content-wrapper {
+  font-size: 1.1em;
+  margin-bottom: 44px;
+}
+.content-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.button {
+  align-items: center;
+  background: #e5efe9;
+  border: 1px solid #5a72b5;
+  border-radius: 4px;
+  color: #121943;
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  font-weight: 700;
+  justify-content: center;
+  width: 12%;
+}
+.button:focus {
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 0px 2px #121943;
+  outline: solid 4px transparent;
+}
+
+.link {
+  color: #121943;
+}
+.link:focus {
+  box-shadow: 0px 0px 0px 2px #121943;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper .label {
+  align-items: baseline;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.input-wrapper .optional {
+  color: #5a72b5;
+  font-size: 0.9em;
+}
+.input-wrapper .input {
+  border: 1px solid #5a72b5;
+  border-radius: 4px;
+  height: 40px;
+  padding: 8px;
+}
+
+code {
+  background: #e5efe9;
+  border: 1px solid #5a72b5;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.modal-header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 16px;
+  text-decoration: none;
+  width: 16px;
+}
+.close svg {
+  width: 16px;
+}
+
+.modal-wrapper {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#modal {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  visibility: hidden;
+}
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal:target .modal-body {
+  opacity: 1;
+  transform: translateY(1);
+}
+#modal .modal-body {
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.25s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+.outside-trigger {
+  bottom: 0;
+  cursor: default;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.button__link {
+  text-decoration: none;
+}
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { border:1px solid red; background: #FECA40; }
+#selectable .ui-selected { border:1px solid red; background: #F39814; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 4em; align-items: center; }
+

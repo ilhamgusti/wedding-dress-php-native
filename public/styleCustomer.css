@@ -1,0 +1,68 @@
+body{
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
+}
+
+#header{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #022335;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+  }
+  .span-header{
+      color: white;
+  }
+  .ButtonLogout{
+    justify-self: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 10px 17px 10px 17px;
+    /* height: 160%; */
+    color: rgb(255, 255, 255);
+    background: rgb(59, 107, 196);
+    border-radius: 15px;
+  }
+  .form-input{
+    grid-template-columns: .6fr 0.04fr 1fr;
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+  }
+  .form-input-items{
+    font-size: 30px;
+    font-family: 'montserrat', sans-serif;
+  }
+  .input-field{
+    font-family: inherit;
+    font-weight: bolder;
+    color: black;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(191, 191, 191);
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .Button{
+    justify-self: center;
+    width: 34%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 10px 17px 10px 17px;
+    /* height: 160%; */
+    color: rgb(255, 255, 255);
+    background: rgb(59, 107, 196);
+    border-radius: 15px;
+  }
