@@ -53,8 +53,8 @@ class Bookings extends Controller
             
             $data = [
                 'phoneNumber' => trim($_POST['phoneNumber']),
-                'tgl_peminjaman' => date('Y-m-d',strtotime($_POST['tgl_peminjaman'])),
-                'tgl_pengembalian' => date("Y-m-d H:i:s",strtotime($_POST['tgl_pengembalian'])),
+                'tgl_peminjaman' => dateConverter($_POST['tgl_peminjaman']),
+                'tgl_pengembalian' => dateConverter($_POST['tgl_pengembalian']),
                 'name' => trim($_POST['name']),
                 'alamat' => trim($_POST['alamat']),
                 'phoneNumber' => trim($_POST['phoneNumber']),

@@ -66,7 +66,7 @@
             <span class="label"> : </span>
         </div>
         <div class="form-input-items">
-            <input readonly type="text"  class="input-field" autocomplete="off" value="<?= date('Y-m-d',strtotime($data->tgl_pengembalian))?>">
+            <input readonly type="text"  class="input-field" autocomplete="off" value="<?= dateConverter($data->tgl_pengembalian)?>">
         </div>
 
         <div class="form-input-items">

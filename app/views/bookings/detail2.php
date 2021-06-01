@@ -37,7 +37,7 @@ require APPROOT . '/views/includes/dashboard/header.php';
                 <div class="c-field has-addon-left u-mb-small">
                     <span class="c-field__addon"><i class="fa fa-calendar"></i></span>
                     <label class="c-field__label u-hidden-visually" for="tgl_peminjaman">Tgl. Peminjaman</label>
-                    <input class="c-input" value="<?= $data->tgl_peminjaman ?>"   data-toggle="datepicker" id="tgl_peminjaman" name="tgl_peminjaman" type="text" placeholder="Masukkan tanggal Peminjaman">
+                    <input class="c-input" value="<?= dateConverter($data->tgl_peminjaman) ?>"   data-toggle="datepicker" id="tgl_peminjaman" name="tgl_peminjaman" type="text" placeholder="Masukkan tanggal Peminjaman">
                 </div>
             </div>
             <div class="col-12">
@@ -45,7 +45,7 @@ require APPROOT . '/views/includes/dashboard/header.php';
                 <div class="c-field has-addon-left u-mb-small">
                     <span class="c-field__addon"><i class="fa fa-calendar"></i></span>
                     <label class="c-field__label u-hidden-visually" for="tgl_pengembalian">Tgl. Pengembalian</label>
-                    <input class="c-input" value="<?= $data->tgl_pengembalian ?>" data-toggle="datepicker" id="tgl_pengembalian" name="tgl_pengembalian" type="text" placeholder="masukkan tanggal pengembalian">
+                    <input class="c-input" value="<?= dateConverter($data->tgl_pengembalian) ?>" data-toggle="datepicker" id="tgl_pengembalian" name="tgl_pengembalian" type="text" placeholder="masukkan tanggal pengembalian">
                 </div>
             </div>
             <div class="col-12">

@@ -44,8 +44,8 @@ require APPROOT . '/views/includes/dashboard/header.php';
                     ?>
                         <tr class="c-table__row c-table__row--<?= statusChecker($value->status)?>">
                             <td class="c-table__cell"><?= $i ?></td>
-                            <td class="c-table__cell"><?= date('Y-m-d', strtotime($value->tgl_peminjaman)) ?></td>
-                            <td class="c-table__cell"><?= date('Y-m-d', strtotime($value->tgl_pengembalian)) ?></td>
+                            <td class="c-table__cell"><?= dateConverter($value->tgl_peminjaman) ?></td>
+                            <td class="c-table__cell"><?= dateConverter($value->tgl_pengembalian) ?></td>
                             <td class="c-table__cell"><?= statusLabel($value->status) ?></td>
                             <td class="c-table__cell"><?= $value->name ?></td>
                             <td class="c-table__cell"><textarea style="width: 272px;resize: block;word-break: break-word;min-height: 50px;border:none;background:transparent" readonly class="c-input"><?= $value->alamat ?></textarea></td>
