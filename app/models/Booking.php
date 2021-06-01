@@ -22,7 +22,7 @@ class Booking
         ELSE DATEDIFF(tgl_pengembalian, NOW())
         END AS status';
 
-        $query = "SELECT *, ".$castQuery." FROM ".$this->tableName;
+        $query = "SELECT *, ".$castQuery." FROM ".$this->tableName ." ORDER BY status ASC";
 
         $this->db->query($query);
         $row = $this->db->get();
