@@ -47,11 +47,14 @@ class Bookings extends Controller
             // Process form
             // Sanitize POST data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+
+     
             
             $data = [
                 'phoneNumber' => trim($_POST['phoneNumber']),
-                'tgl_peminjaman' => date("Y-m-d H:i:s"),
-                'tgl_pengembalian' => date("Y-m-d H:i:s",trim($_POST['tgl_pengembalian'])),
+                'tgl_peminjaman' => date('Y-m-d',strtotime($_POST['tgl_peminjaman'])),
+                'tgl_pengembalian' => date("Y-m-d H:i:s",strtotime($_POST['tgl_pengembalian'])),
                 'name' => trim($_POST['name']),
                 'alamat' => trim($_POST['alamat']),
                 'phoneNumber' => trim($_POST['phoneNumber']),
@@ -61,6 +64,11 @@ class Bookings extends Controller
                 'fileError' => '',
                 'fileStatus' => '',
             ];
+
+            var_dump($data);
+            
+            
+            die();
   
             
             $validationRegex = [
