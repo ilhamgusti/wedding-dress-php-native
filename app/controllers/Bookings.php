@@ -63,13 +63,7 @@ class Bookings extends Controller
                 'phoneNumberError' => '',
                 'fileError' => '',
                 'fileStatus' => '',
-            ];
-
-            var_dump($data);
-            
-            
-            die();
-  
+            ];  
             
             $validationRegex = [
                 'phoneNumberValidation' => "/^[0-9]*$/",
