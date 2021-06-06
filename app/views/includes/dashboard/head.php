@@ -6,6 +6,7 @@
         <title><?php echo SITENAME; ?></title>
         <meta name="description" content="Dashboard UI Kit">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="<?php echo URLROOT ?>" target="_blank">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" rel="stylesheet">
@@ -16,6 +17,7 @@
 
         <!-- Stylesheet -->
         <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/main.min.css">
+        <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/custom.css">
     </head>
     <body>
         <!--[if lte IE 9]>
