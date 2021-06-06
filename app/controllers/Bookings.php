@@ -87,6 +87,23 @@ class Bookings extends Controller
         }
         $this->view('bookings/add2', $data);
     }
+    public function api($method)
+    {
+        if($method === 'getUnavailableDress'){
+            $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+            $tgl_peminjaman = $_GET['tgl_peminjaman'];
+            $tgl_pengembalian = $_GET['tgl_pengembalian'];
+
+            $unavailableDressIds = $this->dressModel->getUnavailableDress($tgl_peminjaman,$tgl_pengembalian);
+            // var_dump($unavailableDressIds);
+            echo json_encode([
+                "code"=> 200,
+                "status" => "Success",
+                "data"=> $unavailableDressIds
+            ]);
+        };
+
+    }
 
     private function validate($data, $validationRegex = [])
     {
