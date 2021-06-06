@@ -1,0 +1,48 @@
+.unavailable{
+    pointer-events: none;
+}
+.unavailable label {
+    border: 1px solid #dc5d5d !important;
+    display: block;
+    background: #ff00000c !important;
+    position: relative;
+    margin: 0 5px 30px;
+    cursor: pointer;
+    border-radius: 5px !important;
+}
+.unavailable img {
+    background-color: red;
+    opacity: 0.4;
+}
+
+
+.x-overlay,
+.x-emoji-overlay {
+  position: relative;
+}
+
+.x-overlay:after,
+.x-emoji-overlay:after {
+    position: absolute;
+    top: 128px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: red;
+    text-align: center;
+}
+
+.x-overlay:after {
+  content: "×";
+  font-size: 54px;
+  line-height: 18px;
+  opacity: 0.7;
+}
+
+.x-emoji-overlay:after {
+  content: "❌";
+  padding: 3px;
+  font-size: 120px;
+  line-height: 18px;
+  opacity: 0.5;
+}
