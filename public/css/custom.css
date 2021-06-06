@@ -1,3 +1,11 @@
+.disableChooseDress {
+    opacity:0.2;
+    pointer-events: none;
+}
+.dateLabel {
+    font-size: 12px;
+}
+
 .unavailable{
     pointer-events: none;
 }
@@ -14,7 +22,6 @@
     background-color: red;
     opacity: 0.4;
 }
-
 
 .x-overlay,
 .x-emoji-overlay {
@@ -40,7 +47,7 @@
 }
 
 .x-emoji-overlay:after {
-  content: "❌";
+  content: "X";
   padding: 3px;
   font-size: 120px;
   line-height: 18px;

@@ -9,7 +9,7 @@ const storeFn = (set) => ({
       set({
           dressIds: result.data
       })
-      return result.data.map(dt => dt.id);
+      return result.data;
   },
 })
 
