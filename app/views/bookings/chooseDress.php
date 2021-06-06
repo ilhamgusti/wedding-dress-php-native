@@ -75,7 +75,7 @@ label img {
 
                     <div class="row">
                         <?php foreach ($data['dresses'] as $i => $dressValue) { ?>
-                            <div class="col-sm-6 col-md-3 u-nospace">
+                            <div class="col-sm-6 col-md-3 u-nospace" data-dress-id="<?= $dressValue->id?>">
                             <input type="checkbox" id="myCheckbox<?= $dressValue->id ?>" name="dressIds[]" value="<?= $dressValue->id ?>"/>
                             <label for="myCheckbox<?= $dressValue->id ?>">
                             <article class="c-plan u-border-zero">
