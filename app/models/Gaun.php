@@ -9,17 +9,23 @@ class Gaun
         $this->db = new Database;
     }
 
-    public function get($tglPeminjaman="", $tglPengembalian="")
+    public function getUnavailableDress($tglPeminjaman="", $tglPengembalian="")
     {
-        $whereCastQuery = "WHERE 
-        (
-        (tgl_peminjaman <= x and x <= tgl_pengembalian ) or
-        (tgl_peminjaman <= y and y <= tgl_pengembalian) 
-        )";
-        $castQuery = "CASE WHEN tgl_pengembalian < NOW() THEN 9999
-        WHEN tgl_peminjaman > NOW() THEN 8888
-        ELSE 20
-        END AS status";
+        // var_dump($tglPeminjaman, $tglPengembalian);
+        $query = "SELECT DISTINCT(dress.id), tgl_peminjaman, tgl_pengembalian 
+                    FROM bookings LEFT JOIN booking_dress on bookings.id = booking_dress.booking_id 
+                    INNER JOIN dress ON dress.id = booking_dress.dress_id 
+                    WHERE (bookings.tgl_peminjaman <= '".$tglPeminjaman."'
+                    AND bookings.tgl_pengembalian >= '".$tglPeminjaman."') 
+                    OR (bookings.tgl_peminjaman <= '".$tglPengembalian."' 
+                    AND bookings.tgl_pengembalian >= '".$tglPengembalian."')";
+
+        $this->db->query($query);
+        $row = $this->db->get();
+        return $row;
+    }
+    public function get()
+    {
         $this->db->query('SELECT * FROM ' . $this->tableName);
         $row = $this->db->get();
         return $row;
