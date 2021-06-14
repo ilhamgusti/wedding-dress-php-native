@@ -61,7 +61,7 @@ require APPROOT . '/views/includes/dashboard/header.php';
                 <div class="c-field u-mb-large">
                     <label class="c-field__label" for="fileSurat">Surat Kontrak</label>
                     <a href="<?php echo URLROOT ?>/<?= $data->link_surat ?>" download="<?php 
-                    $fileData = explode($data->phoneNumber,'/');
+                    $fileData = explode('/', $data->phoneNumber);
                     echo $fileData[count($fileData) - 1];
                     ?>" class="c-btn c-btn--info">
                         <i class="fa fa-download u-mr-xsmall"></i>Download
